@@ -1,0 +1,46 @@
+body {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Sacramento', cursive;
+  color: #a0005a;
+  padding-top: 15px;
+}
+
+#events {
+  margin-top: 5px;
+}
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #496949;
+}
+
+.content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.blockquote {
+  font-size: 0.8em;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container {
+    max-width: 970px;
+  }
+}
+

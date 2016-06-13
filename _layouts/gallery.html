@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-xs-12">
+    {{ content }}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="card">
+      <div class="card-header">
+        <p>Can't see what you're looking for? Wrong colour? Gill can make items to order, please <a href="/contact" title="contact">contact her</a> or come and visit her at an <a href="/contact" title="upcoming events">upcoming event</a>!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% for item in site.data.[page.data] %}
+{% assign imod4 = forloop.index0 | modulo:4 %}
+{% if imod4 == 0 %}
+<div class="row">
+  <div class="card-group">
+{% endif %}
+    <div class="col-md-3">
+      <a href="#" data-toggle="modal" data-target="#image-{{ forloop.index0 }}">
+        <div class="card card-inverse" style="background-color: #333; border-color: #333;">
+          <img class="card-img-top" width="100%" src="{{ page.imgpath }}/{{ item.filename }}" alt="{{ item.name | capitalize }}">
+          <div class="card-block">
+            <p class="card-title small">{{ item.name | capitalize }}</p>
+          </div>
+        </div>
+      </a>
+      <div class="modal" id="image-{{ forloop.index0 }}" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">{{ item.name | capitalize }} &mdash; shown in {{ item.style }} (&pound;{{ item.price }})</h4>
+            </div>
+            <div class="modal-body">
+              <img width="100%" src="{{ page.imgpath }}/{{ item.filename }}" alt="{{ item.name | capitalize }}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% if imod4 == 3 or forloop.last %}
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+

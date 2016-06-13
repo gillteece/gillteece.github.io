@@ -1,0 +1,18 @@
+url:            http://www.beadart.sobo.co.uk
+name:           Beadart
+description:    Beautiful woven beads
+email:          gill@beadart.sobo.co.uk
+exclude:        [README.md]
+
+navigation:
+  - text: Home
+    url: /
+  - text: Necklaces
+    url: /necklaces/
+  - text: Bracelets
+    url: /bracelets/
+  - text: Earrings
+    url: /earrings/
+  - text: Contact
+    url: /contact/
+

@@ -1,0 +1,53 @@
+---
+layout: default
+published: true
+---
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>{{ site.description }}</h2>
+    <div id="beadart-carousel" class="carousel slide" data-ride="carousel" data-interval="7000">
+      <div class="carousel-inner" role="listbox">
+{% for i in (1..8) %}
+        <div class="carousel-item{% if i == 1 %} active{% endif %}">
+          <img data-src="/assets/img/front/beadart-{{ i }}.jpg" src="/assets/img/front/beadart-{{ i }}.jpg" alt="Beadart jewellery">
+        </div>
+{% endfor %}
+      </div>
+      <a class="left carousel-control" href="#beadart-carousel" role="button" data-slide="prev">
+        <span class="icon-prev" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#beadart-carousel" role="button" data-slide="next">
+        <span class="icon-next" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+    <h2>Beautiful woven jewellery</h2>
+    <p>Whether you are looking for jewellery for that special occasion or simply a touch of everyday glamour, you'll find something special in the beautiful Beadart collection.<p>
+    <p>Each piece of intricate woven beadwork is delicately handmade by Gill Teece, with something to suit all tastes. Gill is also happy to discuss tailoring individual designs to order, should you want to match a particular colour or style.</p>
+    <p>Gill will be exhibiting her Beadart collection at forthcoming fairs around Shropshire, see the adjacent list of events. You can also find her work at the <a href="http://www.ironbridge.org.uk" title="Ironbridge Gorge Museum">Ironbridge Gorge Museum Shop</a> at <a href="http://www.ironbridge.org.uk/our-attractions/coalport-china-museum/" title="Coalport China Works">Coalport China Works</a> in Coalport, Shropshire. You can also <a href="/contact" title="contact">contact her</a> directly.</p>
+    <h2>Testimonials</h2>
+    <blockquote class="blockquote">
+      <p>Gill, I'm absolutely thrilled. I can see my 'ensemble' looking sparkly and smashing for the Christmas Concerts that I am going to be performing at.</p><br>
+      <p>Gill was clever enough to extend the already intricate design so that the necklace sat lower on me. It is exquisite, light weight, the clasp for the necklace is easy to use and the bracelet is magnetic – for those of us who fumble for the normal clasps – and if you're worried – there is a safety chain – which blends in with the bracelet – ingenious. My colleague's already had a leaflet.</p><br>
+      <p>You've made my day – and totally within timescales requested. Thank you SO much.</p>
+      <footer class="blockquote-footer">Helen (Thrilled customer)</footer>
+    </blockquote>
+    <blockquote class="blockquote">
+      <p>Had an amazing day, all went well. Received a lot of compliments on the jewellery and told them all about the amazing lady I met while shopping in Shrewsbury!!</p><br>
+      <p>Can't thank you enough. In the end I couldn't choose between the earrings so wore one of each!!!</p><br>
+      <p>Have to say all the items are so light I didn't notice I was wearing them.</p>
+      <footer class="blockquote-footer">Joyce of Macclesfield</footer>
+    </blockquote>
+  </div>
+  <div class="col-md-4">
+    <div id="events"></div>
+  </div>
+</div>
+
